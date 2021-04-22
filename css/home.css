@@ -1,0 +1,226 @@
+@font-face {
+  font-family: HR;
+  src: url("../fonts/Sriracha-Regular.ttf");
+}
+
+
+
+.bgcontainer {
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    min-width: 100%; 
+    min-height: 100%; 
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+
+  .bgcontainer video {
+    /* Make video to at least 100% wide and tall */
+    min-width: 100%; 
+    min-height: 100%; 
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+
+.peepo {
+    position: relative;
+    z-index: 1;
+    transform: translateX(-50%) translateY(-50%);
+    left: 50%
+}
+
+.pulsating-circle {
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	transform: translateX(-50%) translateY(-50%);
+	width: 300px;
+	height: 300px;
+}
+
+
+
+.pulsating-circle:after {
+    background-image: url("../assets/peepoav.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 256px;
+	content: '';
+	position: fixed;
+	left: 0;
+	top: -250px;
+	display: block;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	border-radius: 50%;
+	box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+	animation: pulse-dot 3s cubic-bezier(0.455, 0.03, 0.515, 0.955) -0.4s infinite;
+}
+
+@keyframes pulse-dot {
+	0% {
+		transform: scale(0.8);
+	}
+
+	50% {
+		transform: scale(1);
+	}
+
+	100% {
+		transform: scale(0.8);
+	}
+}
+
+.subtext {
+  text-align: center;
+  width: 600px;
+  font-family: HR;
+  margin-left: -150px;
+  margin-top: 75px;
+  background-image: linear-gradient(45deg, #ffffff, #070424);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #0c0c0c;
+}
+
+a {
+  position: relative;
+  padding: 20px 50px;
+  display: block;
+  text-decoration: none;
+  text-transform: uppercase;
+  width: 200px;
+  margin-left: 50px;
+  margin-top: 50px;
+  overflow: hidden;
+  border-radius: 40px;
+}
+
+a span {
+  position: relative;
+  color: #fff;
+  font-family: Arial;
+  letter-spacing: 8px;
+  margin-left: 5px;
+  z-index: 1;
+}
+
+a .liquid {
+  position: absolute;
+  top: -80px;
+  left: 0;
+  width: 200px;
+  height: 200px;
+  background: #4973ff;
+  box-shadow: inset 0 0 50px rgba(0, 0, 0, .5);
+  transition: .5s;
+}
+
+a .liquid::after,
+a .liquid::before {
+  content: '';
+  width: 200%;
+  height: 200%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -75%);
+  background: #000;
+}
+
+a .liquid::before {
+  
+  border-radius: 45%;
+  background: rgba(20, 20, 20, 1);
+  animation: animate 5s linear infinite;
+}
+
+a .liquid::after {
+  
+  border-radius: 40%;
+  background: rgba(20, 20, 20, .5);
+  animation: animate 10s linear infinite;
+}
+
+a:hover .liquid{
+  top: -120px;
+}
+
+@keyframes animate {
+  0% {
+    transform: translate(-50%, -75%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -75%) rotate(360deg);
+  }
+}
+
+.myBox {
+  border: none;
+  padding: 15px;
+  font: 24px/36px sans-serif;
+  width: 300px;
+  height: 200px;
+  margin-top: 500px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  color: white;
+  background-color: rgba(10, 3, 48, .5);
+  border-radius: 10px;
+  font-family: HR;
+  border: solid rgb(10, 3, 48)
+  }
+  
+  /* Scrollbar styles */
+  ::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+  }
+  
+  ::-webkit-scrollbar-track {
+  border: 1px solid rgb(10, 3, 48);
+  border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+  background: rgb(4, 2, 133);  
+  width: 10px;
+  border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+  background: #17035f;  
+  }
+
+
+
+
+
+
+
